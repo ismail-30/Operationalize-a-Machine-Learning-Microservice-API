@@ -38,26 +38,18 @@ This project contains the following:
 * Minikube
 
 ## Setup the Environment
-Create a virtualenv and activate it
-`Run make install` to install the necessary dependencies
-Running app.py in standalone mode
-`python app.py`
-Linting project codes, this step is done in circle ci
-`make lint`
-Run applicaion with docker, this will create a docker container and run the app:
-`./run_docker.sh`
-Upload docker image to docker hub
-`./upload_docker.sh`
-Need to change dockerpath and docker ID in upload_docker.sh
+- Create a virtualenv and activate it
+- install the necessary dependencies: `make install`
+- Optional: Running app.py in standalone mode: `python app.py`
+- Linting project codes, this step is done in circle ci: `make lint`
+- Run applicaion with docker, this will create a docker container and run the app: `./run_docker.sh`
+- Upload docker image to docker hub: `./upload_docker.sh`. Need to change dockerpath and docker ID in upload_docker.sh
 
 ## Configure Kubernetes to Run locally
-`minikube start`
-`kubectl get pod`
-After pod status change to Running, run the following:
-
-`./run_kubernetes.sh`
-to make a prediciton via Docker or Kubernetes, run
-`./make_prediction.sh`
+- `minikube start`
+- `kubectl get pod`
+- After pod status change to Running, run the following: `./run_kubernetes.sh`
+- In order to make a prediciton via Docker or Kubernetes, run `./make_prediction.sh`
 
 ## Files
 - config.yml: CircleCI configuration yaml file.
