@@ -22,29 +22,50 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
 ---
+This project contains the following:
+
+- Linting project codes.
+- Docker for containerize the applicaion.
+- Deploy containerize application using Docker and prediction.
+- Configure Kubernetes and create a Kubernetes cluster
+- Deploy container using and prediction.
+- Installation of Kubernetes and Minikube.
+
+## Requirements
+* Python 3
+* Docker
+* Kubernetes
+* Minikube
 
 ## Setup the Environment
+Create a virtualenv and activate it
+`Run make install` to install the necessary dependencies
+Running app.py in standalone mode
+`python app.py`
+Linting project codes, this step is done in circle ci
+`make lint`
+Run applicaion with docker, this will create a docker container and run the app:
+`./run_docker.sh`
+Upload docker image to docker hub
+`./upload_docker.sh`
+Need to change dockerpath and docker ID in upload_docker.sh
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
-```bash
-python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
-python3 -m virtualenv --python=<path-to-Python3.7> .devops
-source .devops/bin/activate
-```
-* Run `make install` to install the necessary dependencies
+## Configure Kubernetes to Run locally
+`minikube start`
+`kubectl get pod`
+After pod status change to Running, run the following:
 
-### Running `app.py`
+`./run_kubernetes.sh`
+to make a prediciton via Docker or Kubernetes, run
+`./make_prediction.sh`
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+## Files
+- config.yml: CircleCI configuration yaml file.
+- Makefile: includes instructions for setup, install, test and lint.
+- app.py: Python API application using Flask.
+- Dockerfile: Dockerfile to build docker image and expose port 80
+- run_docker.sh: Shell script to run Docker, locally.
+- upload_docker.sh: Shell script to upload Docker image.
+- run_kubernetes.sh: Shell script to run the app with kubernetes.
+- make_prediction.sh: Shell script to test flask app locally.
 
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
