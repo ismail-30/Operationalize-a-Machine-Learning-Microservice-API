@@ -27,9 +27,10 @@ This project contains the following:
 - Linting the project code.
 - Using Docker to containerize the application.
 - Deploying the containerized application with prediction functionality.
+- Installing Kubernetes and Minikube.
 - Configuring Kubernetes and creating a Kubernetes cluster.
 - Deploying a container with prediction functionality using Kubernetes.
-- Installing Kubernetes and Minikube.
+
 
 ## Requirements
 * Python 3
