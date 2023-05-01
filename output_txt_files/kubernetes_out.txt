@@ -1,6 +1,18 @@
 <paste log output from Kubernetes-mediated prediction, here>
-## using command kubectl logs -f ml-microservice-84bdb56b6d-9ck7z
 
+# get pods
+(base) ismail@ismail-system:~/Documents/Udacity/Cloud_Devops/project_4/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+ml-microservice-798bfcc9c-swbsh   1/1     Running   0          8m
+(base) ismail@ismail-system:~/Documents/Udacity/Cloud_Devops/project_4/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+error: failed to create deployment: deployments.apps "ml-microservice" already exists
+NAME                              READY   STATUS    RESTARTS   AGE
+ml-microservice-798bfcc9c-swbsh   1/1     Running   0          8m4s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+
+## using command kubectl logs -f ml-microservice-798bfcc9c-swbsh
 
  * Serving Flask app 'app'
  * Debug mode: on
