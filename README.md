@@ -24,12 +24,12 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ---
 This project contains the following:
 
-- Linting project codes.
-- Docker for containerize the applicaion.
-- Deploy containerize application using Docker and prediction.
-- Configure Kubernetes and create a Kubernetes cluster
-- Deploy container using and prediction.
-- Installation of Kubernetes and Minikube.
+- Linting the project code.
+- Using Docker to containerize the application.
+- Deploying the containerized application with prediction functionality.
+- Configuring Kubernetes and creating a Kubernetes cluster.
+- Deploying a container with prediction functionality using Kubernetes.
+- Installing Kubernetes and Minikube.
 
 ## Requirements
 * Python 3
