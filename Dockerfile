@@ -12,7 +12,7 @@ COPY . /app
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt || (cat /app/requirements.txt && exit 1)
+    pip install --no-cache-dir -r requirements.txt
 
 ## Step 4:
 # Expose port 80
